@@ -1,0 +1,91 @@
+{
+  "kind": "collectionType",
+  "collectionName": "censuses",
+  "info": {
+    "singularName": "census",
+    "pluralName": "censuses",
+    "displayName": "Census",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "people": {
+      "type": "integer",
+      "required": true
+    },
+    "document": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "document_type": {
+      "type": "enumeration",
+      "enum": [
+        "id_card",
+        "passport"
+      ],
+      "required": true
+    },
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "last_name": {
+      "type": "string",
+      "required": true
+    },
+    "birth_date": {
+      "type": "date",
+      "required": true
+    },
+    "gender": {
+      "type": "enumeration",
+      "enum": [
+        "m",
+        "f"
+      ],
+      "required": true
+    },
+    "civil_state": {
+      "type": "enumeration",
+      "enum": [
+        "single",
+        "married"
+      ],
+      "required": true
+    },
+    "nacionality": {
+      "type": "enumeration",
+      "enum": [
+        "dominican",
+        "foreign"
+      ],
+      "required": true
+    },
+    "picture": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "academic_level": {
+      "type": "enumeration",
+      "enum": [
+        "basic",
+        "bachelor",
+        "grade"
+      ],
+      "required": true
+    },
+    "employed": {
+      "type": "boolean",
+      "default": false,
+      "required": false
+    }
+  }
+}
